@@ -25,4 +25,4 @@ npm run dev
 
 Yerel adres: http://localhost:3000/kavi-iletisim/
 
-Yayın için `npm run build` statik dosyaları `docs/` klasörüne kopyalar. GitHub Pages, `main` dalındaki `/docs` klasöründen yayınlanır.
+Yayın için `npm run build` statik dosyaları `docs/` klasörüne kopyalar. Canlı site, `gh-pages` dalının kökünden yayınlanır (`output: 'export'`, `basePath: '/kavi-iletisim'`). Yeni bir sürüm için `out/` içeriğini `gh-pages` dalına kopyalayıp gönderin.
