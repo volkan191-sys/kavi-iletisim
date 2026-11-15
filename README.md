@@ -1,26 +1,28 @@
 # KAVİ İLETİŞİM tanıtım sitesi
 
-Zeytinburnu'ndaki para transferi dükkânı için sade, statik tanıtım sitesi.
+Zeytinburnu'ndaki para transferi dükkânı için Next.js ile üretilmiş statik tanıtım sitesi.
 
 Canlı adres: https://volkan191-sys.github.io/kavi-iletisim/
 
 ## İletişim bilgilerini değiştirmek
 
-Telefon, WhatsApp, adres veya çalışma saatlerini değiştirmek için yalnızca `js/app.js` dosyasının en üstündeki `CONFIG` bölümünü düzenleyin:
+Telefon, WhatsApp, adres veya çalışma saatlerini değiştirmek için yalnızca `lib/config.ts` dosyasındaki `CONFIG` bölümünü düzenleyin:
 
-- `phoneDisplay`: Ekranda görünen numara (ör. 0544 786 55 26)
-- `phoneTel`: Arama bağlantısı, başında + ve ülke kodu (ör. +905447865526)
-- `whatsappUrl`: WhatsApp bağlantısı (ör. https://wa.me/905447865526)
-- `address`: Açık adres
-- `mapQuery`: Haritada aranacak metin
-- `hours`: Hafta içi / Cumartesi açılış-kapanış saatleri (`sundayClosed: true` Pazar kapalı demektir)
+- `phoneDisplay`: Ekranda görünen numara
+- `phoneTel`: Arama bağlantısı (`+905447865526`)
+- `whatsappUrl`: WhatsApp bağlantısı
+- `address` ve `mapQuery`: Açık adres ve harita araması
+- `hours`: Hafta içi / Cumartesi saatleri
 
 Saatlerin Türkçe, İngilizce ve Rusça metinleri bu değerlerden otomatik üretilir.
 
-## Dil
+## Geliştirme
 
-Site Türkçe başlar. Sağ üstteki TR / RU / EN düğmeleri çeviriyi tarayıcıda değiştirir. Seçim `localStorage` içinde saklanır.
+```bash
+npm install
+npm run dev
+```
 
-## Yayın
+Yerel adres: http://localhost:3000/kavi-iletisim/
 
-GitHub Pages, `main` dalının kökünden yayınlanır. Değişiklik sonrası `git push` yeterlidir.
+Yayın için `npm run build` statik dosyaları `docs/` klasörüne kopyalar. GitHub Pages, `main` dalındaki `/docs` klasöründen yayınlanır.
